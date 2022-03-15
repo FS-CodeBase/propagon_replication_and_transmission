@@ -1,29 +1,35 @@
-function [PRMS,LL,Cmat] = am_alg(propagon_data,sampling_times,MU,SIG,Prms0,Cn,nItrs)
-% % Applies the Adaptive Metropolis Algorithm to fit the asymmetric 
+function [PRMS,LL,Cmat] = am_alg(propagon_data,sampling_times,Prms0,Cn,nItrs)
+% FUNCTION: AM_ALG 
+% % Author: Fabian Santiago
+% % E-mail: FabianSantiago707@gmail.com
+% 
+% DESCRIPTION: Applies the Adaptive Metropolis Algorithm to fit the asymmetric 
 % % transmission of propagons model to the input propagon_data.
-% %
-% % Inputs:
-% %     propagon_data: aggregate data in a cell array. Use 
-% %                    propagon_data(1,:) for MH implementation. 
-% %                    propagon_data(1,:) -> aggregate counts, while
-% %                    propagon_data(2,:) -> generation of aggregate counts
-% %     sampling_times: hold the times that each aggreagate 
-% %     MU: average number of aggregates at time t:=0
-% %     SIG: standard deviation of number of aggregates at time t:=0
-% %     Prms0: initial parameter values
-% %     nItrs: Number of iterations of the AM algorithm
-
-% Add entire project to search path
-addpath('../../asymmetric_transmission/');
+% 
+% INPUTS:
+% % propagon_data: aggregate data in a cell array.
+% % sampling_times: hold the times that each aggreagate 
+% % Prms0: initial parameter values
+% % Cn: initial covariance matrix
+% % nItrs: Number of iterations of the AM algorithm
+% 
+% OUTPUT:
+% % PRMS: Parameter estimates by iterations
+% % LL: Loglikelihood of parameter estimates
+% % Cmat: Covariance matrix by iterations
+%
 
 % Load log version of aggreage dynamics model% [Yn,yn,cn,log_cn,log_Yn]
-[~,~,cn,log_cn,log_Yn] = load_model_sols(MU,SIG);
+MU  = mean(propagon_data{1}); % Initial average distribution of aggregates
+SIG = 1; % Set to model low variance of aggregates.
+[~,~,cn,log_cn,log_Yn] = load_model_solutions(MU,SIG);
 
 % Create anonymous function for Loglikelihood function of Data given
 % aggregate replication dynamics (lambda).
 LL =@(P) LogL(P, sampling_times, log_Yn, log_cn, cn, propagon_data);
 
-% Pre-allocate space for lambdas
+% Pre-allocate space for lambda and rho estimates
+% PRMS = [lambda rho];
 PRMS = [Prms0;zeros(nItrs,2)];
 
 PrmsPre = Prms0;
@@ -80,11 +86,8 @@ for itr = (dnon_adapt+1):(nItrs+1)
     % Update Covariance Matrix using new parameter stamples
     muPrmsCur = (itr)/(itr+1)*muPrmsPre+1/(itr+1)*PRMS(itr,:);
 
-    Cn = COV(Cn,itr,muPrmsPre,muPrmsCur,PRMS(itr,:),sD);
+    Cn = covar(Cn,itr,muPrmsPre,muPrmsCur,PRMS(itr,:),sD);
     Cn = Cn.*Q;
     Cmat(:,:,itr-dnon_adapt) = Cn;
     muPrmsPre = muPrmsCur;
 end
-
-% remove entire project from search path
-rmpath('../../asymmetric_transmission/');

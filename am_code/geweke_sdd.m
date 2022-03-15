@@ -1,13 +1,19 @@
 function p_val = geweke_sdd(in_signal)
 % FUNCTION: GEWEKE_SDD computes Geweke's spectral density diagnostic.
-% % AUTHOR: Fabian Santiago
-% % EMAIL: fsantiago3@ucmerced.edu
-% % DATE: 11/23/2020
-% % INPUTS: IN_SIGNAL an r by c matrix where each c is one parameter and r
-% %                   is an mcmc sample.
+% % Author: Fabian Santiago
+% % E-mail: FabianSantiago707@gmail.com
+% 
+% DESCRIPTION
+% % Computes Gewekes convergence diagnostic 
+%
+% INPUTS 
+% % in_signal: an r by c matrix where each c is one parameter and r
+% %            is an mcmc sample.
+%
+% OUTPUTS
+% % p-value associated with Geweke's convergence diagnostic value
 
-% Determine N, N_a, N_b, and N_star (determined randomly)
-
+% Determine N, N_a, N_b, and N_star
 N = size(in_signal,1);
 N_A = ceil(N/10); N_B = ceil(N/2); N_str = N-N_B+1; 
 
