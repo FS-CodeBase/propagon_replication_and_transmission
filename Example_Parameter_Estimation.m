@@ -25,7 +25,7 @@ num_itrs = 6*10^3;
 % Perform parameter estimation using Adaptive Metropolis Algorithm
 [PRMS,~] = am_alg(propagon_data,sampling_times,Prms0,Cn,num_itrs);
 
-% Plot adaptive Metropolis chain
+% Plot adaptive Metropolis chains
 figure
 T = tiledlayout(2,1);
 nexttile
@@ -44,7 +44,7 @@ T.Title.String = 'Simulated Data';
 shg
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%         Parameter Estimation: Simulated Data         %%%%%%%%%%
+%%%%%%%%%%%      Parameter Estimation: Experimental Data         %%%%%%%%%%
 % Load dataset: Weak
 load('propagon_data_raw/Weak.mat','propagon_data','sampling_times')
 
@@ -56,7 +56,7 @@ num_itrs = 6*10^3;
 % Perform parameter estimation using Adaptive Metropolis Algorithm
 [PRMS,~] = am_alg(propagon_data,sampling_times,Prms0,Cn,num_itrs);
 
-% Plot adaptive Metropolis chain
+% Plot adaptive Metropolis chains
 figure
 L = tiledlayout(2,1);
 nexttile
