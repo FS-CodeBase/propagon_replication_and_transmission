@@ -1,6 +1,13 @@
 # Propagon Replication Rates & Asymmetric Transmission
-Code for estimation of replication rate and asymmetric distribution using experimental aggregate count.
+Code for estimation of replication rate and asymmetric distribution using experimental aggregate count 
 publication: <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1010107">PLOS Computational Biology Article</a>
+
+<img src="figures/Fig0.png" alt="Prion Aggregate Replication Dynamics." width="550" />
+<img src="figures/Fig1.png" alt="Prion Aggregate Count Experiments." width="550" />
+<img src="figures/Fig2.png" alt="Diagram of Structured Model of Prion Aggregate Distribution." width="550" />
+<img src="figures/Fig3.png" alt="Prion Aggregate Count for Six Prion Variants." width="550" />
+
+<img src="figures/Fig4.png" alt="Prion replication rates estimation" width="550" />
 
 <strong>Included:</strong>
 <ul>
