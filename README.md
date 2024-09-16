@@ -12,9 +12,9 @@ publication: <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/
 </ul>
 
 <ol> 
-   <li><img src="figures/Fig0.png" alt="Prion Aggregate Replication Dynamics." width="550" /> </li>
-   <li><img src="figures/Fig1.png" alt="Prion Aggregate Count Experiments." width="550" /> </li>
-   <li><img src="figures/Fig2.png" alt="Diagram of Structured Model of Prion Aggregate Distribution." width="550" /> </li>
-   <li><img src="figures/Fig3.png" alt="Prion Aggregate Count for Six Prion Variants." width="550" /> </li>
-   <li><img src="figures/Fig4.png" alt="Prion replication rates estimation" width="550" /> </li>
+   <li>Prion Aggregate Replication Dynamics. <img src="figures/Fig0.png" alt="Prion Aggregate Replication Dynamics." width="550" /> </li>
+   <li>Prion Aggregate Count Experiments.<img src="figures/Fig1.png" alt="Prion Aggregate Count Experiments." width="550" /> </li>
+   <li>Diagram of structured model, aggregate distribution, and cell division.<img src="figures/Fig2.png" alt="Diagram of Structured Model of Prion Aggregate Distribution." width="550" /> </li>
+   <li>Data of prion aggregate counts for six prion variants.<img src="figures/Fig3.png" alt="Prion Aggregate Count for Six Prion Variants." width="550" /> </li>
+   <li>Estimates of prion replication rates.<img src="figures/Fig4.png" alt="Prion replication rates estimation" width="550" /> </li>
 </ol>
