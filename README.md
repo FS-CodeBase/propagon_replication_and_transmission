@@ -1,4 +1,4 @@
-# Propagon Replication Rates & Asymmetric Transmission
+# Prion Aggregate (Propagon) Replication Rates & Asymmetric Transmission
 Code for estimation of replication rate and asymmetric distribution using experimental aggregate count 
 publication: <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1010107">PLOS Computational Biology Article</a>
 
