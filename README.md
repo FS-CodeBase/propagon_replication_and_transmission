@@ -10,7 +10,9 @@ publication: <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/
   <li><b><em>Example_Simulate_Data.m</em></b>: The script shows how to generate simulated data using the functions in the <b><em>/code/</em></b> folder.<br></li>
   <li><b><em>Example_Parameter_Estimation.m</em></b>: The script shows how to apply the adaptive Metropolis algorithm to simulated and experimental data.<br></li>
 </ul>
+<br />
 
+<strong>Mathematical Modeling and Replication Rate Estimation</strong>
 <ol> 
    <li>Prion cell division dynamics and aggregate replication dynamics. <br /><img src="figures/Fig0.png" alt="Prion Aggregate Replication Dynamics." width="550" /> </li>
    <li>Description of prion aggregate count experiments.<br /><img src="figures/Fig1.png" alt="Prion Aggregate Count Experiments." width="550" /> </li>
