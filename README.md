@@ -4,7 +4,7 @@ publication: <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/
 
 <strong>Included:</strong>
 <ul>
-  <li></li><b><em>propagon_data_raw</em></b>: Folder containing experimental aggregate count datasets for six prion variants.<br></li>
+  <li><b><em>propagon_data_raw</em></b>: Folder containing experimental aggregate count datasets for six prion variants.<br></li>
   <li><b><em>propagon_data_filtered_iqr</em></b>: Folder containing aggregate counts data filtered for outliers.<br></li>
   <li><b><em>propagon_data_down_sampled</em></b>: Folder containing aggregate counts data downsampled in time.<br></li>
   <li><b><em>Example_Simulate_Data.m</em></b>: The script shows how to generate simulated data using the functions in the <b><em>/code/</em></b> folder.<br></li>
