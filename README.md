@@ -18,5 +18,6 @@ publication: <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/
    <li>Description of prion aggregate count experiments.<br /><img src="figures/Fig1.png" alt="Prion Aggregate Count Experiments." width="550" /> </li>
    <li>Diagram of structured model, aggregate distribution, and cell division.<br /><img src="figures/Fig2.png" alt="Diagram of Structured Model of Prion Aggregate Distribution." width="550" /> </li>
    <li>Data of prion aggregate counts for six prion variants.<br /><img src="figures/Fig3.png" alt="Prion Aggregate Count for Six Prion Variants." width="550" /> </li>
-   <li>Estimates of prion replication rates. <em>Note: The appearance of increasing variance over time is a visual artifact from viewing iterations on a logarithmic scale.</em><br /><img src="figures/Fig4.png" alt="Prion replication rates estimation" width="550" /> </li>
+   <li>Estimates of prion aggregate replication rates. <em>Note: The appearance of increasing variance over time is a visual artifact from viewing iterations on a logarithmic scale.</em><br /><img src="figures/Fig4.png" alt="Prion replication rates estimation" width="550" /> </li>
+   <li>Estimates of prion aggretate transmission bias. <em>Note: The appearance of increasing variance over time is a visual artifact from viewing iterations on a logarithmic scale.</em><br /><img src="figures/Fig5.png" alt="Prion replication rates estimation" width="550" /> </li>
 </ol>
